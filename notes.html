@@ -1,0 +1,87 @@
+TODO List
+1. set up github page for Project
+2. push up code
+3. copy repo url and paste it in Nelly's final deliverable team1 links
+4. and github page and paste it in too
+5. 
+
+
+
+An API is simply a medium to fetch or send data between interfaces. Let's say you want to make an application that provides the user with some real-time data fetched from the server or maybe even allows you to modify or add data to some other endpoint.
+
+API - application programming interface
+    web APIs
+        HTTP based interface
+        URL's usually called endpoints
+        browsers come with web APIs that handle certain tasks in the background
+            -like making requests or setTimeout
+
+
+
+JSON - format made for computers to consume to give the live information back
+    Java Script Object Notation
+        just gives back data
+
+
+1. We request info from an API
+2. We get a string
+3. We need to read that string
+4. So we ask JS to turn it into a valid object *BAM* Json comes in
+
+HTTP Verbs (requests)
+    GET, POST, PUT, etc.
+        get-gets information
+        post-impacts the server somewhere; it posts info
+    *So all API docs for example will do something different pending what request is set. document will tell what 
+        CAT API PAGE:
+        get/breeds gets a list of all cat breeds
+        get/fact gets a list of all cat facts
+
+
+Status codes
+100-199 information responses
+200-299 successful responses
+300-399 redirection message
+400-499 client error response
+500-599 server error responses
+
+API response format- API endpoints follow their browser URLs
+    accepted headers
+        text/html- HTML response (default)
+        application/json- JSON response
+        text/plain- plain text response
+
+FETCH API
+    *newer way of making requests via JS
+    *supports promises
+    make requests using function called fetch in JS
+    send to fetch --> returns a promise --> see readable stream in header res.json returns data
+
+    fetch("https://www.enteryourapihere")
+    .then(res => {
+        console.log("RESOLVED!", res)
+    })
+    .catch(e => {
+        console.log("ERROR!", e)
+    })
+
+
+.then
+    methods used with prmoises
+        called after promise is fulfilled (resolved)
+        reutrns a new promise that resolves to the value returned by the callback function
+
+.catch
+    allows you to define block of code to be executed, if error occurs in try block
+    (try and catch come in pairs)
+
+    ASYNC
+The function is declared as asynchronous, enabling the use of await to handle asynchronous operations.
+
+It constructs a URL to request a random photo from the Unsplash API based on the given location and the API access key.
+
+The fetch function sends the request and await waits for the response.
+The response is parsed as JSON, and the URL of the photo is extracted and returned.
+
+If no photo URL is found, a default placeholder image URL is returned.
+ 
